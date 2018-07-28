@@ -7,14 +7,15 @@ const memcached = new Memcached('localhost:11211');
 // -m memory-size
 
 //console.log(memcached);
-
-memcached.set('foo', 'killsos', 10, function (err) {
+memcached.set('foo', 'memcached你好', 0, function (err) {
     if (err) {
         console.log(error);
     }
     console.log('success');
 });
 
+
 memcached.get('foo', function (err, data) {
-    console.log(data);
-  });
+    console.log(data);   
+});
+
